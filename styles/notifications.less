@@ -7,6 +7,9 @@ atom-notifications {
     &.has-detail {
       width: 32em;
     }
+    &.success.icon .content {
+        color: #201e21 !important;
+    }
 
     &:first-child.has-close .message {
       padding-right: 9em;
@@ -23,6 +26,12 @@ atom-notifications {
     .description {
       font-size: .85em;
     }
+
+// .status-added    { .text(gitadd); } // green
+// .status-ignored  { .text(subtle); }  // faded
+// .status-modified { .text(gitwarning); } // orange
+// .status-removed  { .text(giterror); }   // red
+// .status-renamed  { .text(gitinfo); }    // blue
 
     &.icon:before {
       padding-top: .85em;
