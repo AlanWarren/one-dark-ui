@@ -4,7 +4,7 @@
 
 @import "syntax-variables";
 
-.ui-syntax-color() { @syntax-background-color: hsl(220,24%,20%); } .ui-syntax-color(); // fallback color
+.ui-syntax-color() { @syntax-background-color: #201e21; } .ui-syntax-color(); // fallback color
 @ui-syntax-color: @syntax-background-color;
 
 // Color guards -----------------
@@ -13,8 +13,8 @@
 @ui-s-l: lightness(@ui-syntax-color);
 @ui-inv: 10%; // inverse lightness if below
 
-.ui-hue() when (@ui-s-s = 0) { @ui-hue: 220; } // Use blue hue when no saturation
-.ui-hue() when (@ui-s-s > 0) { @ui-hue: @ui-s-h; }
+.ui-hue() when (@ui-s-s = 0) { @ui-hue: 280; } // Use blue hue when no saturation
+.ui-hue() when (@ui-s-s > 0) { @ui-hue: 280; }
 .ui-hue();
 
 .ui-saturation() when (@ui-s-h <=  80) { @ui-saturation: min(@ui-s-s,  5%); } // minimize saturation for brown
@@ -45,7 +45,7 @@
 // These variables are only used in this theme
 // ----------------------------------------------
 
-@ui-theme-name: one-dark-ui;
+@ui-theme-name: one-eclm-ui;
 
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 20%);
